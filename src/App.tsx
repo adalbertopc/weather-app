@@ -2,11 +2,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthProvider } from './context/auth-context'
 
 import SignIn from './routes/sign-in'
+import { ProtectedRoute } from './components/protected-route'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Home</div>,
+    element: <ProtectedRoute children={<div>Home</div>} />,
   },
 
   {
