@@ -44,6 +44,8 @@ VITE_API_URL=weatherapi_url
 VITE_API_KEY=your_api_key
 ```
 
+You can get the weatherapi_url and your_api_key from [https://www.weatherapi.com/](https://www.weatherapi.com/)
+
 4. Run the app with `npm run dev`
 5. Open http://localhost:5173/ in your browser
 6. Enjoy!
