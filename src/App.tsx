@@ -1,13 +1,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthProvider } from './context/auth-context'
-
+import Root from './routes/root'
 import SignIn from './routes/sign-in'
 import { ProtectedRoute } from './components/protected-route'
+import './main.css'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <ProtectedRoute children={<div>Home</div>} />,
+    element: <ProtectedRoute children={<Root />} />,
   },
 
   {
