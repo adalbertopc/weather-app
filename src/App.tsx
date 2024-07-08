@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthProvider } from './context/auth-context'
 
+import SignIn from './routes/sign-in'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -9,7 +11,7 @@ const router = createBrowserRouter([
 
   {
     path: '/sign-in',
-    element: <div>Sign In</div>,
+    element: <SignIn />,
   },
 ])
 
