@@ -1,11 +1,22 @@
-import { Typography } from 'antd'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { AuthProvider } from './context/auth-context'
 
-export const App = () => {
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <div>Home</div>,
+  },
+
+  {
+    path: '/sign-in',
+    element: <div>Sign In</div>,
+  },
+])
+
+export default function App() {
   return (
-    <>
-      <Typography.Title>Hello World!</Typography.Title>
-    </>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   )
 }
-
-export default App
